@@ -69,6 +69,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-positional-encoder-is-all-you-need" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/01/positional-encoder-is-all-you-need/" class="article-date">
+  <time class="dt-published" datetime="2024-03-01T08:21:18.000Z" itemprop="datePublished">2024-03-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/03/01/positional-encoder-is-all-you-need/">positional encoder is all you need</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Apetizer"><a href="#Apetizer" class="headerlink" title="Apetizer"></a>Apetizer</h2><p>Obviously, the inept title intends to pay tribute to <em>“attention is all you need”</em>. Google researchers boldly introduce attention mechanism as the absolute protagonist in word predicting, and they achieve incredible outstanding results. Then OpenAI totally implements a simplified version of transformer and develop the ability to utmost. GPT-series validate that something definitely different emerge in this framework of genius.  </p>
+<h2 id="Soup"><a href="#Soup" class="headerlink" title="Soup"></a>Soup</h2><p>Due to the permutation-invariant of words in new mechanism, they naturally introduce positional encoders to identify the relative or absolute position of each word. We all know that order would largely affect meaning of sentence, “I love you” and “you love me” is totally different. So the additional information they introduce seems intuitive. </p>
+<p>But we could imagine such things, though interchange of some key words would definitely change the whole sentence, it is an ordinary to come across such wrong sentences in our daily lives, but we could still identify what the author (probably) want to convey. Why? because the context, just like we could not identify the direction of time arrow by trajectory of single particle, but the problem would be trivial when we observe a group of particles. All the sentences we met actually are embedded into certain context, explicitly(context) or implicitly(common sense). The analogy aims to express that position encoding(PE) may be an redundant even convey unnecessary bias to the model. Additonally, in my opinion, when GPT read all the text in the world, it actually form his own common sense. </p>
+<p>Though the inference above is novel and reasonable. But it is highly probably wrong. All the existing successful model verify that PE plays an essential role in prediction. </p>
+<h2 id="Side-dish"><a href="#Side-dish" class="headerlink" title="Side dish"></a>Side dish</h2><p>So, we may could think conversely, although our inference contradicts to the experiment results. We could interpret it from a new perspective. Here we propose an assumption: word created by human naturally carrying the information of local position. PE actually introduce a weak instruction to order the sentences globally, to some extents, will. We could unstrictly verify this assumption by the sex trap jokes.</p>
+<h2 id="main-dish"><a href="#main-dish" class="headerlink" title="main dish"></a>main dish</h2><p>Further, we boldly propose such things: order is the ultimate general goal for language. The goal of all kinds of expressions, no matter painting, text, song, is to emphasize something(that is the origin of attention mechanism), that implies kind of order. But if we try to equal order and attention, we would find an important difference, sparsity.<br>For attention mechanism, we could expects that the thing represents attention would definitely be sparse, but we seems could not expect anything could intuitively guarantee same property occurs in order representation. But inspired by the paper^[<a target="_blank" rel="noopener" href="https://www-users.cse.umn.edu/~odlyzko/doc/arch/random.shuffles.pdf]">https://www-users.cse.umn.edu/~odlyzko/doc/arch/random.shuffles.pdf]</a>, we envision such association: the sparsity of order lies in the linear representation of group. It could be observed that there exists plenty of zeroes in the most trivial construction of group representation. And just as words, group representation could be both object and functor(could affect and be affected, mimic the concept in functional programme), so their must exists some deep association between word representation and group representation. RoPe encoding partly supports this assumption, as it actually is a 2-order representation of certain group.</p>
+<p>Furthermore, what is the novel point of our idea, the idea is we rely on less bias and experience, in the other words more general, to analyze the phenomenon of language and expression(image, voice). It is always meaningful to try to associate CV with LM, because they seems so different but the basic tools are so consistent. Moreover, the present LLMs still starts from language created by human, we may could induce the model to create their own language.</p>
+<h2 id="Salad"><a href="#Salad" class="headerlink" title="Salad"></a>Salad</h2><p>For feasibility, we could verify this assumption from dynamic systems. As for any dynamic system results, they are totally different from words and images. Density of information of certain numerical result is far less than word, because word is very “clear”; but it is also more clear than image-like signal, as it ultimately could be expressed by mathematical equations. It seems lie on a threshold of information carrier. More concisely, the information of common dynamic systems are easily hign in dimensions, but the existence of governing equation guarantee there exists way to explore some method to compress the result, furthermore, express local information by another local information(bootstrap).  </p>
+<p>Maybe, we could expect one day we find a good algorithm to let a dynamic system find their own language and with which elaborate their profound nature to us.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/01/positional-encoder-is-all-you-need/" data-id="clt8g88nr0000posza6khe0e1" data-title="positional encoder is all you need" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crazy-Eureka/" rel="tag">crazy, Eureka</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-a-kind-of-generalized-method-to-analyze-time-sequence-of-turbulence" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/02/29/a-kind-of-generalized-method-to-analyze-time-sequence-of-turbulence/" class="article-date">
@@ -369,6 +418,10 @@
       <ul>
         
           <li>
+            <a href="/2025/08/17/Silicon-Minds-in-Lava-and-Storm/">Silicon Minds in Lava and Storm</a>
+          </li>
+        
+          <li>
             <a href="/2025/08/17/A-short-position-on-the-Earth-Moon-economy/">A short position on the Earth-Moon economy</a>
           </li>
         
@@ -382,10 +435,6 @@
         
           <li>
             <a href="/2025/07/25/flow-matching-fund/">flow_matching_fund</a>
-          </li>
-        
-          <li>
-            <a href="/2025/07/24/quick-start-for-DDPM-derivation/">Quick start for DDPM derivation</a>
           </li>
         
       </ul>
