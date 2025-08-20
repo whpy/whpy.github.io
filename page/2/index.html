@@ -69,6 +69,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-code-generator-and-AI" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/15/code-generator-and-AI/" class="article-date">
+  <time class="dt-published" datetime="2024-03-15T01:48:31.000Z" itemprop="datePublished">2024-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/03/15/code-generator-and-AI/">code generator and AI</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Feature-of-code-generator"><a href="#Feature-of-code-generator" class="headerlink" title="Feature of code generator"></a>Feature of code generator</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>A record for some thinking about code generator</p>
+<h2 id="Feature-of-code-generation"><a href="#Feature-of-code-generation" class="headerlink" title="Feature of code generation"></a>Feature of code generation</h2><p>It is natural for one to think that code generation is a subset of text generation, which implies we only need to focus on developing much more powerful LLM. But I think that this is not a simple brutal problem, here we first need to carefully consider the feature of code generation first.</p>
+<p>First, the state and action space of a certain language is limited, actually not so much compared with natural language. And their usage and combination are even fixed for syntax.</p>
+<p>Secondly, the coding is a totally rule complete game, not like most of the language task like translation but rather like go and chess. And compared with chess even we have a very powerful umpire, compilers, which could clearly tell you what your problem is. But the only difference is that coding is more like a open world game with no clear target.</p>
+<p>Third, the local complexity of code is much lower than chess. For practical work, most of the codes are actually copied from existing code. It represents that fine-tune is the essence for over 60% percent of coding.</p>
+<h2 id="Imagination"><a href="#Imagination" class="headerlink" title="Imagination"></a>Imagination</h2><p>based on the points above, we would find that essence of code generator could be summarized in two points:</p>
+<ol>
+<li>translate the requirements into flow graph;</li>
+<li>generate the code based on the flow graph;<br>It is required that the code graph should be very accurate and logical, it should totally obey rule, which is quite different from  simple text generation.</li>
+</ol>
+<p>For the first part, I think we could achieve it by LLM with some self adapted mechanism. The mainly responsibility of this part is to set a target for the open-world game(the flow graph).</p>
+<p>For the second part, we may could mimic the robotic arm, we could introduce diffusion strategies to make a code generator. The reason we introduce diffusion model is that it could well handle and fine-tune existing results to fulfill the requirements. And it show great performance on robotic movement planning. Consider the similarity of the essence of coding and robotic arm, it is worthy to try this strategy.</p>
+<p>Furthermore, we are actually mimicing how alphago develop. As we note the similarity between coding and go.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/15/code-generator-and-AI/" data-id="clw1iiiu70000wosz0ko08dtz" data-title="code generator and AI" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/misc-art-imagination/" rel="tag">misc, art imagination</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-positional-encoder-is-all-you-need" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/03/01/positional-encoder-is-all-you-need/" class="article-date">
@@ -418,6 +471,10 @@
       <ul>
         
           <li>
+            <a href="/2025/08/17/%E4%BA%BA%E7%B1%BB%E4%B8%B0%E5%BA%A6/">人类丰度</a>
+          </li>
+        
+          <li>
             <a href="/2025/08/17/Silicon-Minds-in-Lava-and-Storm/">Silicon Minds in Lava and Storm</a>
           </li>
         
@@ -431,10 +488,6 @@
         
           <li>
             <a href="/2025/07/27/torch-distribute/">torch.distribute</a>
-          </li>
-        
-          <li>
-            <a href="/2025/07/25/flow-matching-fund/">flow_matching_fund</a>
           </li>
         
       </ul>
